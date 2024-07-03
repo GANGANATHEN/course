@@ -1,0 +1,19 @@
+.icons{
+    border: 3px solid rgb(201, 25, 6);
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    margin:20px 5%;
+    align-items: center;
+    /* display: block; */
+
+}
+/* .icons i{
+    display: block;
+    margin-top: 10px;
+} */
+
+/* .testing a{
+    display: block;
+    margin:20px 5%;
+} */

@@ -1,0 +1,43 @@
+li{
+    list-style: none;
+}
+button{
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
+.btn-2{
+    margin-top: 20px;
+}
+.btn-2 li{
+    display: inline;
+}
+.btn-2 li a{
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+.ar{
+    border:solid ;
+    border-radius: 50%;
+    background-color: yellow;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
