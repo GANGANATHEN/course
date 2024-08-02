@@ -17,8 +17,10 @@ function Decrement(){
 
 function save1(){
     let countstr = count + "";
-    console.log(countstr);
+    // console.log(countstr);
+    para.innerText = count * 0;
     save.innerText = countstr;
+    // console.log(c);
 }
 // console.log(incre);
 

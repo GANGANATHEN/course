@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <button id="btnInc" onclick="Increment()">Increment</button>
-    <button id="btnDec" onclick="Decrement()">Decrement</button>
-    <button id="btns" onclick="save1()">save</button>
-    <p id="para">0</p>
-    <p id="old"></p>
-    <script src="./script.js"></script>
+    <div class="container">
+        <div class="card">
+            <button class="btn btn-primary gap" id="btnInc" onclick="Increment()">Increment</button>
+            <button class="btn btn-primary" id="btnDec" onclick="Decrement()">Decrement</button>
+            <button class="btn btn-primary gap-up" id="btns" onclick="save1()">save</button>
+            <h3>Current Count : <p class="text" id="para">0</p></h3>
+            <h3>Old Count : <p class="text" id="old">0</p></h3>
+            <script src="./script.js"></script>
+        </div>
+    </div>
 </body>
 </html>
