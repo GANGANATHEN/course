@@ -1,3 +1,11 @@
+window.onload = function() {
+    const name = prompt('Enter Student Name:');
+    if (name) {
+      document.getElementById('nameDisplay').innerText = `${name}'s Grade points`;
+    }
+};
+
+
 document.getElementById('gradeForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -28,5 +36,6 @@ document.getElementById('gradeForm').addEventListener('submit', function(event) 
 
     document.getElementById('result').innerText = `Average Score: ${totalMark.toFixed(2)}\nGrade: ${grade}`;
   });
+  
 
 

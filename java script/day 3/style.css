@@ -1,0 +1,5 @@
+input::placeholder {
+    color: #04f010 !important; /* Change this to your desired color */
+    font-style: italic;
+    opacity: 1 !important; /* Override default opacity for better visibility */
+  }
