@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Board</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="toss tss-1" id="tos">
+        <h1>Toss Decision</h1>
+        <p id="result">Click the button to toss</p>
+        <button onclick="toss()">Toss</button>
+    </div>
+    <div class="container">
+        <div class="team-1">
+            <h1>Team 1</h1>
+            <p id="dp-1"></p>
+            <h3 id="ds-1"></h3>
+            <div class="hidden" id="Tbtn-1">
+                <button id="btn-1" onclick="butt1()">+1</button>
+                <button id="btn-2" onclick="butt2()">+4</button>
+                <button id="btn-3" onclick="butt3()">+6</button>
+            </div>
+        </div>
+        <div class="team-2">
+            <h1>Team 2</h1>
+            <p id="dp-2"></p>
+            <h3 id="ds-2"></h3>
+            <div class="hidden" id="Tbtn-2">
+                <button id="btn-4" onclick="butt4()">+1</button>
+                <button id="btn-5" onclick="butt5()">+4</button>
+                <button id="btn-6" onclick="butt6()">+6</button>
+            </div>
+        </div>
+        <p id="show"></p>
+        <p id="show1"></p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

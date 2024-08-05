@@ -1,0 +1,23 @@
+.container{
+    width: 600px;
+    margin: 20vh auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.team-1{
+    background-color: rgb(255, 196, 196);
+    padding: 60px;
+}
+.team-2{
+    background-color: rgb(255, 196, 196);
+    padding: 60px;
+}
+.hidden{
+    display: none;
+}
+.toss{
+    display: block;
+}
+.tss-1{
+    margin: 10px 5%;
+}
