@@ -10,7 +10,11 @@
     <div class="toss tss-1" id="tos">
         <h1>Toss Decision</h1>
         <p id="result">Click the button to toss</p>
-        <button onclick="toss()">Toss</button>
+        <div>
+            <label for="">Enter ball count</label>
+            <input id="b-count" type="number" placeholder="choose no.of balls" value="10">
+        </div>
+        <button style="display: block; margin-top: 20px;" onclick="toss()">Toss</button>
     </div>
     <div class="container">
         <div class="team-1">
@@ -22,7 +26,11 @@
                 <button id="btn-2" onclick="butt2()">+4</button>
                 <button id="btn-3" onclick="butt3()">+6</button>
             </div>
+            <p id="f-msg"></p>
+            <p id="show"></p>
+            <p id="b-show"></p>
         </div>
+
         <div class="team-2">
             <h1>Team 2</h1>
             <p id="dp-2"></p>
@@ -32,9 +40,10 @@
                 <button id="btn-5" onclick="butt5()">+4</button>
                 <button id="btn-6" onclick="butt6()">+6</button>
             </div>
+            <p id="f-msg"></p>
+            <p id="show1"></p>
+            <p id="b-show1"></p>
         </div>
-        <p id="show"></p>
-        <p id="show1"></p>
     </div>
 
     <script src="./script.js"></script>

@@ -10,6 +10,10 @@ const tbtn2 = document.getElementById("Tbtn-2");
 const dp1 = document.getElementById("dp-1");
 const dp2 = document.getElementById("dp-2");
 
+// ballcount
+const bcou = document.getElementById("b-count").value;
+
+
 // buttons ...
 
 const but1 = document.getElementById("btn-1");
@@ -68,6 +72,8 @@ function butt6(){
 
 // toss 
 
+
+
 function toss() {
     // Randomly decide if Team 1 or Team 2 wins the toss
     const isTeam1Win = Math.random() < 0.5;
@@ -77,10 +83,12 @@ function toss() {
         tbtn1.style.display = 'block';
         dp2.innerText = "Bowl";
         document.getElementById('tos').style.display = 'none';
+        document.getElementById('b-show').innerText = `Total balls = ${bcou}`;
     } else {
         document.getElementById('dp-2').textContent = "Team 2 wins the toss.";
         tbtn2.style.display = 'block';
         dp1.innerText = "Bowl";
         document.getElementById('tos').style.display = 'none';
+        document.getElementById('b-show1').innerText = `Total balls = ${bcou}`;
     }
 }

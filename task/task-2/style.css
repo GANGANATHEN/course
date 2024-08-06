@@ -1,17 +1,21 @@
+body{
+    background-color: rgb(220, 245, 238);
+}
 .container{
     width: 600px;
     margin: 20vh auto 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.team-1{
+.team-1 , .team-2{
     background-color: rgb(255, 196, 196);
     padding: 60px;
+    border-radius: 22px;
 }
-.team-2{
+/* .team-2{
     background-color: rgb(255, 196, 196);
     padding: 60px;
-}
+} */
 .hidden{
     display: none;
 }
@@ -20,4 +24,36 @@
 }
 .tss-1{
     margin: 10px 5%;
+    background-color: azure;
+    text-align: center;
+    padding: 20px;
+    border-style: double;
+    border-radius: 22px;
+    align-items: center;
+}
+.tss-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+button{
+    padding: 5px 10px;
+    color: #ffff;
+    background-color: red;
+    border-radius: 7px;
+    border: 1px solid red;
+}
+button:hover{
+    color: #ffff;
+    background-color: rgb(215, 112, 112);
+    border-radius: 7px;
+    border: 1px solid rgb(215, 112, 112);
+}
+button:active{
+    color: #ffff;
+    background-color: rgba(255, 0, 0, 0.559);
+    border-radius: 7px;
+    border: 1px solid rgba(255, 0, 0, 0.559);
 }
