@@ -19,6 +19,8 @@ const bcou = document.getElementById("b-count").value;
 const but1 = document.getElementById("btn-1");
 const but2 = document.getElementById("btn-2");
 const but3 = document.getElementById("btn-3");
+
+
 const but4 = document.getElementById("btn-4");
 const but5 = document.getElementById("btn-5");
 const but6 = document.getElementById("btn-6");
