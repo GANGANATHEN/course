@@ -50,12 +50,12 @@ fetch('https://api.github.com/users/arun-cloud-dev')
         console.log("Username:", data.login);
         console.log("Followers:", data.followers);
         document.getElementById("name").innerText = `Username:${data.name}`
-        document.getElementById("id").innerText = `Username:${data.id}`
-        document.getElementById("uname").innerText = `Username:${data.username}`
-        document.getElementById("url").innerText = `Username:${data.url}`
-        document.getElementById("fol").innerText = `Username:${data.followers}`
-        document.getElementById("location").innerText = `Username:${data.location}`
-        document.getElementById("bio").innerText = `Username:${data.bio}`
+        document.getElementById("id").innerText = `Id:${data.id}`
+        document.getElementById("uname").innerText = `Node Id:${data.node_id}`
+        document.getElementById("url").innerText = `URL:${data.url}`
+        document.getElementById("fol").innerText = `Followers:${data.followers}`
+        document.getElementById("location").innerText = `Location:${data.location}`
+        document.getElementById("bio").innerText = `Bio:${data.bio}`
     })
     .catch(error => {
         console.error("Error:", error.message);

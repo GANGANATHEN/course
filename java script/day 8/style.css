@@ -1,7 +1,12 @@
-/* #ds{
-    border: 3px solid salmon;
+.container{
+    margin-top: 40px;
+}
+
+#name,#uname,#id,#location,#bio,#url,#fol{
+    border: 2px solid rgb(81, 116, 105);
     text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-    margin:3% 20%;
-} */
+    padding: 10px;
+    background-color: rgb(10, 227, 162);
+    margin:0 20%;
+    color: #130d0d;
+}
