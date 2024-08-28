@@ -42,4 +42,3 @@ document.getElementById("dat").innerText = `${day}day/${month}/month${year}/year
 
 var start = Date.now()
 console.log(start);
-

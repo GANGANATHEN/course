@@ -54,14 +54,14 @@ fetch('https://api.github.com/users/arun-cloud-dev')
         document.getElementById("name").innerText = `Username:${data.name}` || `no data`;
         document.getElementById("id").innerText = `Id:${data.id}`
         document.getElementById("uname").innerText = `Node Id:${data.node_id}`
-        document.getElementById("url").innerText = `URL:${data.url}`
-        document.getElementById("fol").innerText = `Followers:${data.followers}`
+        document.getElementById("url").innerText = `URL:${data.followers_url}`
+        document.getElementById("fol").innerText = `Followers:${data.url}`
         document.getElementById("location").innerText = `Location:${data.location}`
         document.getElementById("bio").innerText = `Bio:${data.bio}`
         document.getElementById('p-img').src = data.avatar_url || "data not available"
         // document.getElementById('link').href = data.followers_url
 
-        const followurl =  document.getElementById("url")
+        const followurl =  document.getElementById("followers_url")
         if(data.followers_url){
             followurl.href = data.followers_url
             followurl.innerText = "Click here"
