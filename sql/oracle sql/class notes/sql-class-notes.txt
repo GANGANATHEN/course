@@ -1,0 +1,62 @@
+**********DAY 1*************
+
+soon(feature) => date data type - dd-mon-yy --> yy-dd-mon ===$$$$===
+
+start -> connect system/g
+
+cmd  =>spool D:\oracletest(foldername)\filename --> record the sql data
+end =>spool off(save the record file)
+
+create table =>	create table tablename(items);
+alter table => ALTER TABLE (tablename) add (name or something);
+
+view table =>desc (table name);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********DAY 2*************
+
+=>select *from tab; -> its show all tables in database
+
+========day 2 -=- tasks=========
+
+create table employee(empno number(5),ename varchar2(20),dob date,doj date,basic_pay number(10,2),da number,hra number,pf number,netpay number(10,2)); ->create table
+alter table employee modify ename varchar2(25); --> modify table
+alter table employee add mno number(10); --> add table
+alter table employee rename column empno to emo;
+truncate table employee;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********DAY 3*************
+Data Manipulation Language(DML)
+
+@@insert : insert into (tablename) values (list of value);
+==>& -->you out this sympole -> enter the value:
+==>insert into (tablename)(&empno,'&ename','&dob','&doj',&basic_bay);
+
+@@select : where,like,distinct,between,..
+=>select *from (tablename);
+=>select ename,eno from (tablename); ==> view only selected data
+==> view only selected data --> select (tablehead) from (tablename);
+=>select *from tab; -> its show all tables in database
+==>select *from (tablename) where age>34;
+==>select *from (tablename) where name like '__na%'; --> show 'na' assign names output->"jana","mana"
+==>select *from (tablename) where name in ('Raman','jana') --> show this two name
+==>select *from (tablename) where name not in ('Raman','jana')--> skip this two name
+==>select *from (tablename) order by asc;
+==>select *from (tablename) order by desc;
+==>select *from (tablename) order by rno desc;
+
+@@update:
+==>update (tablename) set da=basic*20/100,pf=basic_pay*12/100;
+==>update (tablename) set total=basic+basic_pay;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********DAY 4*************
+
+@@delete-
+
+
+
+
