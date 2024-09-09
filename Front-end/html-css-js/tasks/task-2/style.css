@@ -12,10 +12,12 @@ body{
     padding: 60px;
     border-radius: 22px;
 }
-/* .team-2{
-    background-color: rgb(255, 196, 196);
-    padding: 60px;
-} */
+.team-1{
+    display: none;
+}
+.team-2{
+    display: none;
+}
 .hidden{
     display: none;
 }

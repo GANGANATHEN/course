@@ -19,6 +19,12 @@ view table =>desc (table name);
 
 ========day 2 -=- tasks=========
 
+DDL commands:->
+
+@@create
+@@alter
+@@truncate
+@@drop
 create table employee(empno number(5),ename varchar2(20),dob date,doj date,basic_pay number(10,2),da number,hra number,pf number,netpay number(10,2)); ->create table
 alter table employee modify ename varchar2(25); --> modify table
 alter table employee add mno number(10); --> add table
@@ -32,7 +38,8 @@ Data Manipulation Language(DML)
 
 @@insert : insert into (tablename) values (list of value);
 ==>& -->you out this sympole -> enter the value:
-==>insert into (tablename)(&empno,'&ename','&dob','&doj',&basic_bay);
+==>insert into (tablename) into(&empno,'&ename','&dob','&doj',&basic_bay);
+insert into (tablename) (eno,rno) values (list of value);
 
 @@select : where,like,distinct,between,..
 =>select *from (tablename);
@@ -41,8 +48,11 @@ Data Manipulation Language(DML)
 =>select *from tab; -> its show all tables in database
 ==>select *from (tablename) where age>34;
 ==>select *from (tablename) where name like '__na%'; --> show 'na' assign names output->"jana","mana"
+==>select *from (tablename) where name like '%j%' or ('j%'); -> show 'j' assign names output->"jana"
+==>select *from (tablename) where name between '%D%' and 'K%';
 ==>select *from (tablename) where name in ('Raman','jana') --> show this two name
 ==>select *from (tablename) where name not in ('Raman','jana')--> skip this two name
+==>select *from (tablename) order by name;
 ==>select *from (tablename) order by asc;
 ==>select *from (tablename) order by desc;
 ==>select *from (tablename) order by rno desc;
@@ -50,12 +60,34 @@ Data Manipulation Language(DML)
 @@update:
 ==>update (tablename) set da=basic*20/100,pf=basic_pay*12/100;
 ==>update (tablename) set total=basic+basic_pay;
+==>update (tablename) set age=21 where name='mena';
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **********DAY 4*************
 
-@@delete-
+@@delete:
+==>delete from (tablename) where rno=104;
+
+Trasaction Cntrol Laguage(TCL):
+
+---> commit: is save ll data to the database
+---> rollback :
+--->savepoint:its not a cmnd, its a marker;
+==>savepoint s1(s1 is user defined name);
+==>rollback to savepoint s1; usage of this cmnd -> its only save the brevious record
+
+========day 2 -=- tasks=========
+>create table student(rno number,name varchar(20),m1 number,m2 number,m3 number,m4 number,m5 number,total number,avg number, result varchar(20));
+>insert into student (rno,name,m1,m2,m3,m4,m5) values (1,'a',98,97,87,85,90);
+>insert into student (rno,name,m1,m2,m3,m4,m5) values (2,'b',97,67,57,85,60);
+>insert into student (rno,name,m1,m2,m3,m4,m5) values (3,'c',96,99,87,85,90);
+
+>update student set total=m1+m2+m3+m4+m5;
+>update student set avg=total/5;
+
+
+
 
 
 
