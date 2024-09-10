@@ -1,0 +1,253 @@
+SQL> select *from student;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457                                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366                                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457                                                           
+                                                                                
+
+SQL> update student set avg=total/5;
+
+3 rows updated.
+
+SQL> select *from student;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4                                                
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2                                                
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4                                                
+                                                                               
+
+
+SQL> UPDATE student SET result = CASE WHEN avg >= 50 THEN 'pass' ELSE 'fail' END;
+
+3 rows updated.
+
+SQL> select *from student;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+SQL> insert into student (rno,name,m1,m2,m3,m4,m5) values (4,'d',30,59,72,31,20);
+
+1 row created.
+
+SQL> select *from student;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         4 d                            30         59         72         31     
+        20                                                                      
+                                                                                
+
+SQL> update student set total=m1+m2+m3+m4+m5;
+
+4 rows updated.
+
+SQL> update student set avg=total/5;
+
+4 rows updated.
+
+SQL> UPDATE student SET result = CASE WHEN avg >= 50 THEN 'pass' ELSE 'fail' END;
+
+4 rows updated.
+
+SQL> select *from student;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         4 d                            30         59         72         31     
+        20        212       42.4 fail                                           
+                                                                                 
+
+
+SQL> select total,avg,result from student;
+
+     TOTAL        AVG RESULT                                                    
+---------- ---------- --------------------                                      
+       457       91.4 pass                                                      
+       366       73.2 pass                                                      
+       457       91.4 pass                                                      
+       212       42.4 fail                                                      
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select *from student where total>400;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+SQL> select *from student where name like 'a%';
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                 
+
+
+SQL> select *from student order by name;
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         4 d                            30         59         72         31     
+        20        212       42.4 fail                                           
+                                                                                
+
+SQL> select *from student where name between '%b%' and 'f%';
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         4 d                            30         59         72         31     
+        20        212       42.4 fail                                           
+                                                                                
+
+SQL> select *from student where name between '%b%' and 'd%';
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         1 a                            98         97         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         2 b                            97         67         57         85     
+        60        366       73.2 pass                                           
+                                                                                
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         4 d                            30         59         72         31     
+        20        212       42.4 fail                                           
+                                                                                
+
+SQL> select *from student where name between 'b%' and 'd%';
+
+       RNO NAME                         M1         M2         M3         M4     
+---------- -------------------- ---------- ---------- ---------- ----------     
+        M5      TOTAL        AVG RESULT                                         
+---------- ---------- ---------- --------------------                           
+         3 c                            96         99         87         85     
+        90        457       91.4 pass                                           
+                                                                                
+         4 d                            30         59         72         31     
+        20        212       42.4 fail                                           
+                                                                                
+
+SQL> select *from student where name between 'b%' and '%d';
+
+no rows selected
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off;
