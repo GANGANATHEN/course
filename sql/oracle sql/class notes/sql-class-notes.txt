@@ -27,6 +27,7 @@ DDL commands:->
 @@alter
 @@truncate
 @@drop
+
 create table employee(empno number(5),ename varchar2(20),dob date,doj date,basic_pay number(10,2),da number,hra number,pf number,netpay number(10,2)); ->create table
 alter table employee modify ename varchar2(25); --> modify table
 alter table employee add mno number(10); --> add table
@@ -71,7 +72,7 @@ insert into (tablename) (eno,rno) values (list of value);
 @@delete:
 ==>delete from (tablename) where rno=104;
 
-Trasaction Cntrol Laguage(TCL):
+Trasaction Cntrol Laguage(TCL): ######## important #######
 
 ---> commit: is save ll data to the database
 ---> rollback :
@@ -93,3 +94,52 @@ Trasaction Cntrol Laguage(TCL):
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **********DAY 5*************
+
+INTEGRITYCONSTRAINTS
+
+@--->DOMAIN INTEGRITYCONSTRAINTS{
+
+-->not null constraints:
+>create table (tablename) (empno number(10) constraint cust not null,name varchar(20));==>cust - constraints name,not null - constraints type;
+
+-->check constraints:
+> CREATE TABLE Employees( EmployeeID INT CHECK(EmployeeID BETWEEN 100 AND 1000), NAME VARCHAR(20), DeptID INT CHECK(DeptID > 0 AND DeptID < 100), SALARY 
+NUMBER(10));
+}
+
+@--->Entity Intigrity Constraints{
+
+-->unique constraints:
+>create table (tablename) (empno number(10) not null,name varchar(20),constraint empno_unique unique (empno));
+
+-->Primary Key constraints:
+>create table (tablename) (empno number(10) not null,name varchar(20),constraint empno_primry primary Key (empno)); ==>(empno_primry) name os user defined in constraints
+>>create table (tablename) (empno number(10) primary Key,name varchar(20) not null);
+
+-->Default constraints:
+>create table (tablename) (empno number(10) not null,name varchar(20) default 'g');
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
