@@ -122,20 +122,45 @@ NUMBER(10));
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+**********DAY 6*************
 
+@--->Referential Intigrity Constraints{
+===>parent is primary key and child key is foreign key.
 
+-->Foreign Key:
+>create table (tablename) (empno number(10),name varchar(20),constraint empno_pk1 primary Key (empno));
 
+-->Reference Key:
+>create table (tablename) (empno number(10),name varchar(20),constraint empno_pk1 foreign Key (empno) reference (tablename)(empno) on delete cascade);
+}
 
+@--->dual:
+-->dual is the predefined table in oracle.
 
+>desc dual;
 
+@--->single row functions:(date,numeric,charecter,convertion,miscellaneous)
 
+date-:
+->add_month(d,n); =>d-date, n-no.of months
+>select add_month(sysdate,10) from dual;
 
+->last_day(d);
+>select last_day(sysdate) from dual;
 
+->months_between(d1,d2);
+>select months_between('dd-mon-yy','dd-mon-yy') from dual;
 
+->next_day();
+>select next_day(sysdate,'friday') from dual;
 
+->round:
+>select round(to_date('11-sep-2024,'dd-mon-yy'),'month'); ==> 15 days after - before
+>select round(to_date('11-sep-2024,'dd-mon-yy'),'year'); ==> 6 months after - before
+>select round(to_date('11-sep-2024,'dd-mon-yy'),'day'); ==> first half
 
-
-
+->Truncate:
+>select trunc(to_date('11-sep-2024,'dd-mon-yy'),'month');
 
 
 
