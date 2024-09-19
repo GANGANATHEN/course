@@ -1,0 +1,76 @@
+SQL> connect system
+Enter password:
+Connected.
+SQL> create table employees (employee_id number primary key,first_name varchar2(50),last_name varchar2(50),hire_date date,salary number(10,2));
+
+Table created.
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER
+ FIRST_NAME                                         VARCHAR2(50)
+ LAST_NAME                                          VARCHAR2(50)
+ HIRE_DATE                                          DATE
+ SALARY                                             NUMBER(10,2)
+
+SQL> alter table employees add department varchar2(30);
+
+Table altered.
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER
+ FIRST_NAME                                         VARCHAR2(50)
+ LAST_NAME                                          VARCHAR2(50)
+ HIRE_DATE                                          DATE
+ SALARY                                             NUMBER(10,2)
+ DEPARTMENT                                         VARCHAR2(30)
+
+SQL> alter table employees modify salary(12,2);
+alter table employees modify salary(12,2)
+                                   *
+ERROR at line 1:
+ORA-00902: invalid datatype
+
+
+SQL> alter table employees modify salary number(12,2);
+
+Table altered.
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER
+ FIRST_NAME                                         VARCHAR2(50)
+ LAST_NAME                                          VARCHAR2(50)
+ HIRE_DATE                                          DATE
+ SALARY                                             NUMBER(12,2)
+ DEPARTMENT                                         VARCHAR2(30)
+
+SQL> alter table employees drop department;
+alter table employees drop department
+                           *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table employees drop column department;
+
+Table altered.
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER
+ FIRST_NAME                                         VARCHAR2(50)
+ LAST_NAME                                          VARCHAR2(50)
+ HIRE_DATE                                          DATE
+ SALARY                                             NUMBER(12,2)
+
+SQL> drop table employees;
+
+Table dropped.
+
+SQL>

@@ -141,7 +141,7 @@ NUMBER(10));
 
 @--->single row functions:(date,numeric,charecter,convertion,miscellaneous)
 
-date-:
+@--date-:
 ->add_month(d,n); =>d-date, n-no.of months
 >select add_month(sysdate,10) from dual;
 
@@ -163,8 +163,91 @@ date-:
 >select trunc(to_date('11-sep-2024,'dd-mon-yy'),'month');
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********DAY 7*************
+
+->Greatst:
+>select greatest(to_date(sysdate),to_date('11-sep-2024,'dd-mon-yy'),from dual); it's show which one is greatest.
+
+@--charecter-:
+->concatenation(||):
+>select table (tname) (column1)||(column2) from (tname);
+
+->ascii:
+>select ascii('a') from dual; //print ascii value
+
+->chr:
+>select chr('010') from dual; //print ascii charecter
+
+->concat:
+>select concat(fname,lname) fnamelname from (tname);
+
+->initcap:
+>select initcap(fname) from (tname); //first letter only capital
+
+->length:
+>select length(fname) from (tname);
+>select length('hi dude') from dual;
+
+->lower:
+>select length('hi dude') from dual;
+
+->lpad:
+>select lpad(fname,5),lname from (tablename); -->it's allocate left side 5-padding(space)
+>select lpad(fname,5,"@"),lname from (tablename); -->it's allocate right side @@@ sympole
+
+->ltrim:
+>select ltrim('fname','ame'),lname from (tablename);
+
+->rpad:
+>select rpad(fname,5),lname from (tablename);
+>select rpad(fname,5,"@"),lname from (tablename); -->it's allocate right side @@@ sympole
+
+->rtrim:
+>select rtrim('fname','ame'),lname from (tablename);
+
+->translate:
+>select translate('hidude','h','o') from dual;\\output -oidude
+
+->replace:
+>select replace('jack and jue','j','bl') from dual;\\output - black and blue
+
+->substr:
+>select substr('jackandjue',3,3) from dual;\\output - cka
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**********DAY 8*************
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********DAY 9*************
+
+-->Group function:{}
+-->set operation:{}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********DAY 10*************
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**********DAY 11*************
+
+-->create view:
+>create view (newtablename) as select (oldtablevalues) from (oldtablename);
+
+-->Grouping a data:
 
 
 
 
 
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
