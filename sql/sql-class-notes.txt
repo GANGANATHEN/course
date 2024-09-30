@@ -1,0 +1,23 @@
+day 1
+
+soon => date data type - dd-mon-yy --> yy-dd-mon
+
+start -> connect system
+
+cmd =>spool D:\oracletest(foldername)\filename --> record the sql data
+end =>spool off(save the file)
+
+create table =>	.....();
+alter table => ALTER TABLE (tablename) add (name or something);
+
+view table =>desc (table name);
+
+select *from tab; -> its show all tables in database
+create table employee(empno number(5),ename varchar2(20),dob date,doj date,basic_pay number(10,2),da number,hra number,pf number,netpay number(10,2); ->create table
+alter table employee modify ename varchar2(25); --> modify table
+alter table employee add mno number(10); --> add table
+alter table employee rename column empno to emo;
+truncate table employee;
+
+
+
