@@ -1,0 +1,18 @@
+ttitle left 'page no:' format 99 sql.pno center 'PRODUCTWISE SALES' Skip 4 
+set pause 'more----'
+set pause on 
+column prod_no heading 'Product No'
+column prod_no format a10 justify centre
+column description heading 'Description'
+column description format a15 justify centre
+column unit_measures heading 'UOM'
+column unit_measures format a8 justify centre
+column qty_ordered format 99999
+column prod_rate heading 'Rate'
+Column prod_rate format 9999
+Select product_master.prod_no, 
+product_master.description,product_master.unit_measures,sum(Qty_ordered) 
+"Quantity",sales_order_details.prod_rate "Price" ,sum(Qty_ordered*prod_rate) 
+"Total" from sales_order_details, product_master where product_master.prod_no = 
+sales_order_details.prod_no group by product_master.prod_no, 
+product_master.description,product_master.unit_measures,sales_order_details.prod_rate;

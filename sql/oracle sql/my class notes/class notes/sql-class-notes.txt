@@ -1,23 +1,69 @@
-^^^^^^^^^ F:\project files\course\course\sql\oracle sql\practice ^^^^^
+^^^^^^^^^ F:\project files\course\course\sql\oracle sql ^^^^^
 
 **********DAY 1*************
+ 
+soon(feature) => date data type - dd-mon-yy --> yy-dd-mon ===$$$$=== @@Done@@
 
-soon(feature) => date data type - dd-mon-yy --> yy-dd-mon ===$$$$===
+start -> connect system/password;
 
-start -> connect system/g
+cmd  =>spool D:\oracletest(foldername)\filename --> record the sql data.
+end =>spool off(save the record file).
 
-cmd  =>spool D:\oracletest(foldername)\filename --> record the sql data
-end =>spool off(save the record file)
+->Tools of Oracle:
+::The main tools provided by Oracle are:- 
+(i) SQL *PLUS
+(ii) PL/SQL
+(iii) Forms
+(iv) Reports
+
+->Oracle Data Types:{
+1. CHAR:{
+	Syntax :
+	=>CHAR(size) -> size - Number of characters. It is varying from 1 to 2000 bytes.
+}
+2.VARCHAR2:{
+	Syntax :
+	=>VARCHAR2(size) -> size - Number of characters(up to 4000 bytes).
+}
+3. LONG:{
+	Syntax :
+	=>LONG(size) -> size - Number of characters.
+}
+4.NUMBER DATA TYPES:{
+	Syntax :
+	salary number;
+	=>NUMBER(P,S) -> {p - Total Number of digit (1 to 38).
+			  s - Number of digits to the right of the decimal point (-84 to 127). -> ex(12.34). }
+}
+5.DATE DATA TYPE:{
+	Syntax :
+	DATE
+	format - 'DD-Mon-YY' ->{ DD - first three letter of day (mon,sun).
+				 Mon - (like Mar,Jan etc.).
+				 Year - last two number. }
+}
+6.RAW DATA TYPE:{
+	Syntax :
+	=>RAW(size) -> size of the data (maximum 2000 bytes).
+
+}
+7.LONG RAW DATA TYPE:{
+	Syntax :
+	=> LONG RAW(size) -> size of the data (maximum size of 2 GB).
+}
+}
 
 create table =>	create table tablename(items);
 alter table => ALTER TABLE (tablename) add (name or something);
 
 view table =>desc (table name);
+=>select *from (table name);
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **********DAY 2*************
 
-=>select *from tab; -> its show all tables in database
+=>select *from tab; -> its show all tables in database.
+=>rename (oldtablename) to (newtablename); -> rename table.
 
 ========day 2 -=- tasks=========
 
@@ -28,16 +74,23 @@ DDL commands:->
 @@truncate
 @@drop
 
-create table employee(empno number(5),ename varchar2(20),dob date,doj date,basic_pay number(10,2),da number,hra number,pf number,netpay number(10,2)); ->create table
-alter table employee modify ename varchar2(25); --> modify table
-alter table employee add mno number(10); --> add table
-alter table employee rename column empno to emo;
-truncate table employee;
-
+create table employee(empno number(5),ename varchar2(20),dob date,doj date,basic_pay number(10,2),da number,hra number,pf number,netpay number(10,2)); ->create a table.
+alter table employee modify ename varchar2(25); --> modify table.
+alter table employee add mno number(10); --> add a new table variable.
+alter table employee rename column empno to emo; --> rename a variable name.
+truncate table employee; --> delete all records from the table.
+drop table <table_name>; --> remove table from the database;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **********DAY 3*************
 Data Manipulation Language(DML)
+
+DML commands:->
+
+@@insert
+@@select
+@@Update
+@@Delete
 
 @@insert : insert into (tablename) values (list of value);
 ==>& -->you out this sympole -> enter the value:
@@ -74,9 +127,9 @@ insert into (tablename) (eno,rno) values (list of value);
 
 Trasaction Cntrol Laguage(TCL): ######## important #######
 
----> commit: is save ll data to the database
----> rollback :
---->savepoint:its not a cmnd, its a marker;
+---> commit: is save all data to the database.
+---> rollback : -> (undo) the entire transaction.
+--->savepoint:its not a cmnd, its a marker.
 ==>savepoint s1(s1 is user defined name);
 ==>rollback to savepoint s1; usage of this cmnd -> its only save the brevious record
 
@@ -218,15 +271,28 @@ NUMBER(10));
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **********DAY 8*************
+->avg(m1(column name));
+->max(m1(column name));
+->min(m1(column name)) 
+->max(m1(column name));
+->sum(m1(column name));
+->count(*); --> it's show all record count of the table.
+->count(distinct m2) --> particular coloumn.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **********DAY 9*************
 
--->Group function:{}
+-->Group function:{
+#union -> show all values in one time(unique (each values)).
+#union all -> show entire data from the tables.
+#intersect -> show same value in multible times in the tables.
+#minus -> show all unique value in the table.
+}
 -->set operation:{}
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **********DAY 10*************
+>groub by
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **********DAY 11*************
 
@@ -237,14 +303,52 @@ NUMBER(10));
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **********DAY 12*************
+
+->set serveroutput on;
+>start "F:\project files\course\course\sql\oracle sql\my class notes\sql program\program1.txt";
+>/ - to run the sql program;
+>start "F:\project files\course\course\sql\oracle sql\my class notes\sql program\program2.txt"
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **********DAY 13*************
+
+PL-SQL(PL-programing langu)
+OBJECTIVES:
+* Introduction to PL/SQL
+* Datatypes and their usage
+* Control Structures
+* Concept of Error Handling
+
+Structure of PL/SQL 
+``````````````````````````````
+DECLARE
+declarations
+BEGIN
+executable statements
+EXCEPTION
+handlers
+END;
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **********DAY 14*************
 
 PL-SQL(PL-programing langu)
+1.Conditonal Control In PL/SQL.
+2.update,select cmd using plsql.
+3.Dynamic Data Types, Dynamic Inialization.
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**********DAY 15*************
+4.for and while loop
+>dbms_output.put_line(j); -> this line is execute the program output in sql cmd.
+>set serveroutput on;
+>{declare
+  a number;
+  n number;
+  n:=&a;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**********DAY 16*************
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+set headsep!
+ttitle on
+ttitle 'checkoutlog'
+btitle on
+btitle 'from bookshelf'
+column name format a20
+column title format a20 word_wrapped
+column daysout heading 'days!out'
+break on name skip on report
+compute avg of daysout on report
+set linesize 80 
+set pagesize 30
+set newpage 0
+set feedback off
+select name,title,issue_date,return_date,sum (return_date-issue_date)
+as daysout from bookshelf_checkout group by name, title, issue_date,return_date 
+order by name, issue_date;
