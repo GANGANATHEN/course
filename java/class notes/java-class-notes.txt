@@ -1,0 +1,74 @@
+----------------------------------------------------------------------------day-2---------------------------------------------------------------------------
+
+JAVA - Just Another Virtual Accelerator
+
+--> java is a tightly scripted language and homogeneous
+
+--> javaScript is a loosly scripted language and heterogeneous
+
+structure of JAVA-:-->
+------------------
+
+public class cassname{
+
+public static void main(string[]args){
+
+System.out.println("Hello God");
+}
+}
+
+How to create a class?
+------------------------
+
+->class name is first letter is capital
+
+syntax:
+-------
+Accessmodifier(or)Accesspecifier class classname{
+  //code
+}
+
+
+
+Accessmodifier is four types{
+-->public -> you can access any class
+-->private -> you can access only with in class
+-->protected -> you can use child and its familier class
+-->Default -> you can access within class you use.
+}
+
+how to create a method?
+-----------------------
+
+syntax:
+-------
+Accessmodifier static returntype methodname(arguments){
+	//code
+}
+
+static -> is optional
+returntype -> means datatype or void(it means null value)
+
+Java Data Types:
+----------------
+
+premitive Data Types{
+->byte     - 8bit
+->short    - 16bit
+->int	   - 32bit
+->long     - 64bit
+->float	   - 32bit
+->double   - 64bit
+->char     - 16bit
+->Boolean  - 1bit
+}
+
+non-premitive Data Types{
+->array
+->String
+->Classes
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
