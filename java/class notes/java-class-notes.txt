@@ -20,7 +20,7 @@ System.out.println("Hello God");
 How to create a class?
 ------------------------
 
-->class name is first letter is capital
+->class name is first letter is capital (for user identification)
 
 syntax:
 -------
@@ -55,7 +55,7 @@ Java Data Types:
 premitive Data Types{
 ->byte     - 8bit
 ->short    - 16bit
-->int	   - 32bit
+->int	   - 32bit range ->> -2147463647 to +2147463646
 ->long     - 64bit
 ->float	   - 32bit
 ->double   - 64bit
@@ -65,10 +65,19 @@ premitive Data Types{
 
 non-premitive Data Types{
 ->array
-->String
+->Object
 ->Classes
 }
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------day-3------------------------------------------------------------------------------
+
+how to create a variable?
+-------------------------
+
+-> Accessmodifier static(or)final datatype variablename = value;
+-> if you use final you can't change the value.
+-> long g = 2147463647L; if the value is greater than int you must mention "L".
+
+-------------------------------------------------------------------------day-4------------------------------------------------------------------------------
 
