@@ -42,7 +42,7 @@ how to create a method?
 
 syntax:
 -------
-Accessmodifier static returntype methodname(arguments){
+Accessmodifier static returntype methodname(parameter){
 	//code
 }
 
@@ -80,4 +80,77 @@ how to create a variable?
 -> long g = 2147463647L; if the value is greater than int you must mention "L".
 
 -------------------------------------------------------------------------day-4------------------------------------------------------------------------------
+
+create object
+---------------
+
+class Raja{
+	int k=20;
+    static float g=22.1f;
+int add(){
+	sop("welcome");
+	return (int);
+}
+psvm(){
+	sop(g);
+	Raja r=new Raja()
+	r.add();
+}
+}
+
+how to create object reference?
+------------------------------
+
+	classname variablename = new classname(); // new is a keyword
+
+
+sample code
+-----------
+
+
+class Raja{
+	
+int add(){
+	sop("welcome");
+	return 40;
+}
+psvm(){
+	Raja r=new Raja()
+	int y= r.add();
+	sop(y);
+}
+}
+
+single line object
+-------------------------------
+
+class Raja{
+	
+int add(){
+	sop("welcome");
+	return 40;
+}
+psvm(){
+	int y= new Raja().add();
+	sop(y);
+}
+}
+
+type casting
+-------------------------------
+
+class Raja{
+	
+float add(){
+	sop("welcome");
+	return 40;
+}
+psvm(){
+	int y= (int)new Raja().add();
+	sop(y);
+}
+}
+
+-------------------------------------------------------------------------day-5------------------------------------------------------------------------------
+
 
