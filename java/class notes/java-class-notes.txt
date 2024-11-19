@@ -122,7 +122,7 @@ psvm(){
 }
 
 single line object
--------------------------------
+-------------------
 
 class Raja{
 	
@@ -137,7 +137,7 @@ psvm(){
 }
 
 type casting
--------------------------------
+------------
 
 class Raja{
 	
@@ -152,5 +152,83 @@ psvm(){
 }
 
 -------------------------------------------------------------------------day-5------------------------------------------------------------------------------
+OOPS:->
+-------
+->Inheritance
+->Polymorphism
+->Encapsulation
+->Constructor
+->Abstraction
+->Interface
+
+class creation:
+---------------
+
+--> do not create public class in first
+
+->1.private
+->2.protect
+->3.default
+->4.public
+
+
+->Inheritance->{
+
+ex1:
+----
+
+pubic class Ramu{
+void m1(){
+   sop("Hello");
+}
+}
+public class Raja extend Ramu{
+void m2(){
+  sop("hi");
+}
+psvm(){
+ Raja r = new Raja();
+ r.m1();
+ r.m2();
+}
+}
+
+
+ex2:
+----
+
+pubic class Ramu{
+void m1(){
+   sop("Ramu");
+}
+}
+pubic class Tamil{
+void m2(){
+   sop("Tamil");
+}
+}
+public class Raja extend Ramu{
+void m2(float z,char a){
+  sop("Raja");
+  float t = z;
+  char t1 = a;
+  sop(t);
+  sop(t1);
+ //sop(z);
+ //sop(a);
+}
+psvm(){
+ Raja r = new Raja();
+ // Ramu r = new Raja(); //dynamic metod
+ r.m1();
+ r.m2();
+}
+}
+
+}<-
+
+-------------------------------------------------------------------------day-6------------------------------------------------------------------------------
+
+
 
 
