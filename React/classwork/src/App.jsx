@@ -4,7 +4,10 @@
 // import './index.css'
 // import Spread from "./day2/Spread.jsx"
 // import Input from "./day2/Input.jsx"
-import Day1 from "./practice/Day1.jsx"
+// import Day1 from "./practice/Day1.jsx"
+// import Hform from "./day3/Hform.jsx"
+// import Table from "./day3/Table.jsx"
+import Day2  from "./practice/Day2.jsx"
 
 function App() {
   return (
@@ -13,7 +16,10 @@ function App() {
       {/* <Test /> */}
       {/* <Spread /> */}
       {/* <Input /> */}
-      <Day1 />
+      {/* <Day1 /> */}
+      {/* <Hform /> */}
+      {/* <Table /> */}
+      <Day2 />
     </>
   )
 }
