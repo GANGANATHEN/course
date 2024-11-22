@@ -1,5 +1,5 @@
 import React from 'react'
-
+///it'normal code this code is never used in this page don't wate your time g
 const Table = () => {
   return (
     <>

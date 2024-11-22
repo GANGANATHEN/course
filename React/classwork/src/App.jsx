@@ -7,7 +7,9 @@
 // import Day1 from "./practice/Day1.jsx"
 // import Hform from "./day3/Hform.jsx"
 // import Table from "./day3/Table.jsx"
-import Day2  from "./practice/Day2.jsx"
+// import Day2  from "./practice/Day2.jsx"
+// import Useeffect from "./day4/Useeffect.jsx"
+import Task1 from "./day5/Task1.jsx"
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       {/* <Day1 /> */}
       {/* <Hform /> */}
       {/* <Table /> */}
-      <Day2 />
+      {/* <Day2 /> */}
+      {/* <Useeffect /> */}
+      <Task1 />
     </>
   )
 }
