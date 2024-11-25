@@ -9,7 +9,9 @@
 // import Table from "./day3/Table.jsx"
 // import Day2  from "./practice/Day2.jsx"
 // import Useeffect from "./day4/Useeffect.jsx"
-import Task1 from "./day5/Task1.jsx"
+// import Task1 from "./day5/Task1.jsx"
+// import Comp1 from "./day6/Comp1.jsx"
+import Ref from "./day6/Ref.jsx"
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
       {/* <Table /> */}
       {/* <Day2 /> */}
       {/* <Useeffect /> */}
-      <Task1 />
+      {/* <Task1 /> */}
+      {/* <Comp1 /> */}
+      <Ref />
     </>
   )
 }
