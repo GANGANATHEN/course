@@ -288,5 +288,52 @@ psvm(){
 
 -------------------------------------------------------------------------day-7------------------------------------------------------------------------------
 
+ex1:
+----
 
+package Programs;
+class Ramu {
+	Ramu(int y,int r){
+		int g = y+r;
+		System.out.println(g);
+	}
+		int z = 30;
+	byte v = (byte) z;
+       float m2() {
+		System.out.println("Welcome");
+		return 345566778889899f;
+	}
+	
+	}
+
+class Raja extends Ramu {
+    Raja(int y, int r) {
+		super(y, r);
+	}
+
+	int m1(int x,double z) {
+    	System.out.println("Good");
+    	System.out.println(x+z);
+		return x;
+    }
+}
+
+public class Inheritance extends Raja {
+
+	Inheritance(int y, int r) {
+		super(y, r);
+	}
+
+	public static void main(String[] args) {
+		Inheritance i = new Inheritance(20,40);
+		int a =i.m1(10, 15);
+		System.out.println(a);
+		float e = i.m2();
+		System.out.println(e);
+		
+
+	}
+	
+
+}
 
