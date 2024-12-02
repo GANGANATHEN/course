@@ -11,7 +11,15 @@
 // import Useeffect from "./day4/Useeffect.jsx"
 // import Task1 from "./day5/Task1.jsx"
 // import Comp1 from "./day6/Comp1.jsx"
-import Ref from "./day6/Ref.jsx"
+// import Ref from "./day6/Ref.jsx"
+// import Day3 from "./practice/Day3.jsx"
+// import Reduser from "./day7/Reduser.jsx"
+// import Day4 from "./practice/Day4"
+// import Contact from "./practice/useEffect/Contact"
+// import Task81 from "./day8/Task81"
+// import Task82 from "./day8/Task82"
+import Sample from "./practice/Sample"
+
 
 function App() {
   return (
@@ -27,7 +35,14 @@ function App() {
       {/* <Useeffect /> */}
       {/* <Task1 /> */}
       {/* <Comp1 /> */}
-      <Ref />
+      {/* <Ref /> */}
+      {/* <Day3 /> */}
+      {/* <Reduser /> */}
+      {/* <Day4 /> */}
+      {/* <Contact /> */}
+      <Sample />
+      {/* <Task81 /> */}
+      {/* <Task82 /> */}
     </>
   )
 }
