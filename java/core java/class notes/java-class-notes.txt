@@ -173,6 +173,9 @@ class creation:
 
 
 ->Inheritance->{
+=>dynamic method - left side paren,right side child
+=>dynamic binding - method overide
+=>static binding - method overrlode
 
 multilevel Inheritence:
 -----------------------
@@ -338,7 +341,83 @@ public class Inheritance extends Raja {
 }
 
 -------------------------------------------------------------------------day-8------------------------------------------------------------------------------
+Polymorphism:
 
+method overriding - runtime
+method overloading - compile time
 
+method overriding - runtime{
+ex1
+---
+class Raja{
 
+void add(int a, int b){
+   int c = a+ b;
+   sop(c);
+}
+}
+class Ramu extends Raja{
 
+void add(int a, int b){
+   int c = a+ b;
+   sop(c);
+   sop("good")
+}
+psvm(){
+ Ramu a = new Ramu();
+ a.add(10,20);
+ Raja a = new Raja();
+}
+}
+
+ex2 use super:
+--------------
+
+class Raja{
+
+void add(int a, int b){
+   int c = a+ b;
+   sop(c);
+}
+}
+class Ramu extends Raja{
+
+void add(int a, int b){
+   int c = a+ b;
+   sop(c);
+   sop("good")
+   super.add(10,30)
+}
+psvm(){
+ Ramu a = new Ramu();
+ a.add(10,20);
+}
+}
+
+}
+
+method overloading - compile time{
+
+ex1
+---
+
+class Ramu extends Raja{
+
+int area(int a, int b){
+   sop(a*b)
+}
+float area(float a, float b){
+   sop(a*b)
+}
+psvm(){
+ Ramu a = new Ramu();
+ float z =a.area(10.4f,20.8f);
+ sop(z)
+}
+}
+
+-------------------------------------------------------------------------day-9------------------------------------------------------------------------------
+
+set = mutator
+get = Accseser
+triplet

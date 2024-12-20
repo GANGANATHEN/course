@@ -18,7 +18,7 @@
 // import Contact from "./practice/useEffect/Contact"
 // import Task81 from "./day8/Task81"
 // import Task82 from "./day8/Task82"
-import Sample from "./practice/Sample"
+// import Sample from "./practice/Sample"
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
       {/* <Reduser /> */}
       {/* <Day4 /> */}
       {/* <Contact /> */}
-      <Sample />
+      {/* <Sample /> */}
       {/* <Task81 /> */}
       {/* <Task82 /> */}
     </>
