@@ -1,0 +1,13 @@
+@RestController
+@RequesMapping("/api")
+
+ref table -> {
+@Entity
+@table(name = "tablename")
+
+@Id
+@Autowire - obj-ref(control class) link the obj
+
+source -get/set->construsefield->genr-to-str
+
+day 2

@@ -19,6 +19,8 @@
 // import Task81 from "./day8/Task81"
 // import Task82 from "./day8/Task82"
 // import Sample from "./practice/Sample"
+import Login from "./interview/loginform/Login"
+import Maincomponent from "./interview/compo/Maincomponent"
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
       {/* <Sample /> */}
       {/* <Task81 /> */}
       {/* <Task82 /> */}
+      {/* <Login /> */}
+      <Maincomponent />
     </>
   )
 }
