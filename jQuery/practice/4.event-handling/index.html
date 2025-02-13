@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <button id="btn">Click Me</button><br><br>
+    <div id="hoverDiv" style="width: 100px; height: 100px; background-color: dimgrey;"></div><br>
+    <input type="text" name="" id="inputField" placeholder="focus on me"><br><br>
+    <div id="parent">
+        <button class="child">child button</button>
+    </div><br>
+    <button id="btn1">Click Me</button><br><br>
+
+
+    <script>
+        //click()
+        $("#btn").click(function(){
+            alert("Button Clicked");
+        });
+
+        //dblclick()
+        // $("#btn").dblclick(function(){
+        //     alert("Button Double Clicked");
+        // });
+
+        //hover()
+        // $("#hoverDiv").mouseenter(function(){
+        //     alert("Mouse Enter");
+        // });
+        $("#hoverDiv").hover(function(){
+            $(this).css("background-color", "red");
+        }, function(){
+            $(this).css("background-color", "dimgrey");
+        });
+
+        //focus()
+        $("input").focus(function(){
+            $(this).css("border", "2px solid yellow");
+        });
+
+        //blur()
+        $("input").blur(function(){
+            $(this).css("border", "2px solid green");
+        });
+
+        //on()
+        $("#parent").on("click", ".child", function(){
+            alert("Child Button Clicked");
+        });
+
+        //off()
+        $("#btn1").on('click', showAlert); function showAlert(){
+            alert("Button Clicked");
+            $("#btn1").off("click", showAlert);
+        };
+
+    </script>
+</body>
+</html>
