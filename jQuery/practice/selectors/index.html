@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div id="uniqueElement">Content</div>
+    <div class="box">content 1</div>
+    <div class="box">content 2</div>
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <form action="">
+        <input type="text" placeholder="Name">
+        <input type="password" placeholder="Password">
+        <input type="text" name="username">
+        <input type="text" name="email">
+    </form>
+
+    <a href="http://example.com">example .com</a>
+    <a href="http://example.org">example .org</a>
+    <a href="https://google.com">google</a>
+
+    <div class="container">
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+    </div>
+    <script>
+        // Selecting an element by id selector
+        $('#uniqueElement').text('Changed content');
+
+        // Selecting an element by class selector
+        $('.box').css('color', 'red');
+        
+        // Selecting an element by tag selector
+        // $('p').hide();
+
+        // Selecting an element by attribute selector
+        $('[type]').css('border', '1px solid red');
+
+        // Selecting an element by value selector
+        $('input[name="username"]').css('border', '1px solid blue').val('username');
+
+        // Selecting an element by partial value selector
+        $('a[href*="example"]').css('color', 'green');
+        $('a[href^="https://google"]').css('color', 'navy');
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+// syntax
+
+$(selector).action()
+
+$ = short hand jQuery function
+selector = string to get HTML elements
+action = jQuery method or function to perform work on the selected elements
