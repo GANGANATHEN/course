@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        .new {
+            color: red;
+        }
+        .container{
+            border: 2px solid salmon;
+            padding: 20px;
+        }
+        .bg{
+            background-color: lightcyan;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div id="content">old HTML</div>
+    <img id="logo" src="logo.png" alt="logo">
+    <input type="text" name="" id="inputField" value="old value">
+    <div id="parent">
+        <p>paragraph1</p>
+    </div>
+    <div id="box">conent new class</div>
+    <div id="box1" class="new">conent1 new class</div>
+    <div id="box2">conent2 new-class false</div>
+    <div id="box3" class="new">conent3 new-class true</div>
+    <div class="container">
+        <button id="btn1">Click me!</button>
+    </div>
+    <h1>siblings highlights</h1>
+    <div class="items">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item spl">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <script>
+        // using html() function
+        // $('#content').html('<h1>New HTML</h1>');
+
+        // using text() function
+        $('#content').text('New text');
+
+        // using attripute() function
+        $('#logo').attr('src', 'new_logo.png');
+        $('#logo').attr('alt', 'new logo');
+
+        // using value() function
+        $('#inputField').val('new value');
+
+        // using append() function
+        $('#parent').append('<p>paragraph2</p>');
+
+        // using prepend() function
+        $('#parent').prepend('<p>paragraph0</p>');
+
+        // using after() function
+        $('#parent').after('<div class="im-new">after parent</div>');
+
+        // using before() function
+        $('#parent').before('<div class="im-new">before parent</div>');
+
+        // using remove() function
+        $('.im-new').remove();
+
+        // using empty() function
+        // $('#parent').empty();
+
+        // using addClass() function
+        $('#box').addClass('new');
+
+        // using removeClass() function
+        $('#box1').removeClass('new');
+
+        // using toggleClass() function
+        $('#box2').toggleClass('new');
+        $('#box3').toggleClass('new');
+
+        // using hasClass() function
+        console.log($('#box').hasClass('new'));
+
+        // using css() function
+        // $('.container').css('background-color', 'lightblue');
+
+        // using click() function
+        // $('#btn1').click(function(){
+        //     alert('Button clicked!');
+        // });
+
+        //using parent() function
+        // console.log($('#box').parent());
+        $('#btn1').click(function(){
+            var parentEl1 =($(this).parent());
+            parentEl1.toggleClass('bg');
+        });
+
+        // using children() function
+        // console.log($('#parent').children());
+
+        // using siblings() function
+        $('.item').click(function(){
+            $(this).siblings().toggleClass('bg');
+            $(this).siblings('.spl').css('background-color', 'red');
+        });
+
+    </script>
+</body>
+</html>

@@ -29,6 +29,13 @@
         <p>paragraph1</p>
         <p>paragraph2</p>
     </div>
+
+    <div class="parent">
+        <p>parent Paragraph</p>
+        <div>
+            <p>Child Paragraph</p>
+        </div>
+    </div>
     <script>
         // Selecting an element by id selector
         $('#uniqueElement').text('Changed content');
@@ -48,6 +55,14 @@
         // Selecting an element by partial value selector
         $('a[href*="example"]').css('color', 'green');
         $('a[href^="https://google"]').css('color', 'navy');
+
+        // Selecting an element by Descendent selector
+        $('.container p').css('color', 'purple');
+
+        // Selecting an element by Child selector
+        $('.parent > p').css('color', 'orange');
+        $('.parent div p').css('color', 'blue');
+
     </script>
 </body>
 </html>
